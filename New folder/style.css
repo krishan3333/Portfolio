@@ -72,16 +72,23 @@ header ul li a {
     font-weight: bold;
     font-size: 1.9rem;
     
+    
 }
+.social-links{
+    margin-top: 20px;
+    
+}
+
 .social-links a {
-    color: #00fff0;
+    color: #ffffff;
     font-size: 1.5rem;
     margin-right: 15px;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition:color 0.3s , ease transform 0.3s ease;
 }
 .social-links a:hover {
-    transform: scale(1.1);
+    color: rgb(255, 6, 6);
+    transform: scale(1.5);
 }
 
 .profile-image {
