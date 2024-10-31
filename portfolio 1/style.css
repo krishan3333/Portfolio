@@ -41,14 +41,26 @@ header ul li a {
 }
 
 .hero {
-    background-image: url(Screenshot\ \(65\).png);
-    background-size: cover;
-    background-position: center;
+    position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 60px 20px;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.intro-text, .profile-image {
     position: relative;
     z-index: 1;
 }
@@ -84,10 +96,11 @@ header ul li a {
     font-size: 1.5rem;
     margin-right: 15px;
     text-decoration: none;
-    transition:color 0.3s , ease transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+
 }
 .social-links a:hover {
-    color: rgb(255, 6, 6);
+    color: rgb(22, 38, 211);
     transform: scale(1.5);
 }
 
