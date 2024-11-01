@@ -8,7 +8,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #141e15;
+    background-color: hsl(0, 13%, 6%);
     color: #ffffff;
 }
 header nav {
@@ -16,10 +16,15 @@ header nav {
     background-size: cover;
     background-position: center;
     display: flex;
+    
     justify-content: space-between;
     padding: 20px 40px;
+    position: relative;
     align-items: center;
     background-color: #0e1113;
+    z-index: 10;
+    pointer-events:auto;
+    
 }
 header h1 {
     font-size: 2em;
@@ -29,14 +34,15 @@ header ul {
     display: flex;
     list-style: none;
     
+    
 }
 header ul li {
-    margin-left: 35px;
+    margin-right: 45px;
 }
 header ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.2rem;
     
 }
 
@@ -44,6 +50,7 @@ header ul li a {
     position: relative;
     height: 100vh;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
     padding: 60px 20px;
@@ -51,12 +58,12 @@ header ul li a {
 }
 
 .background-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     z-index: -1;
 }
 
@@ -88,6 +95,7 @@ header ul li a {
 }
 .social-links{
     margin-top: 20px;
+    position: relative;
     
 }
 
@@ -97,11 +105,13 @@ header ul li a {
     margin-right: 15px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
 
 }
 .social-links a:hover {
-    color: rgb(22, 38, 211);
+    color: rgb(18, 220, 231);
     transform: scale(1.5);
+    z-index: 1;
 }
 
 .profile-image {
@@ -116,4 +126,28 @@ header ul li a {
     width: 100%;
   height: 100%;
   object-fit: cover;
+}
+section {
+    z-index: 1;
+    position: relative;
+    
+
+}
+
+h2 {
+    color: #ffffff;
+    z-index: 1;
+}
+
+
+    .Project {
+    background: #000000;
+    margin: 20px;
+    padding: 20px;
+    border-left: 5px solid #00fff0;
+    box-shadow: 0 5px 15px rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+}
+.Project:hover {
+    transform: scale(1.05);
 }
